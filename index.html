@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exchange Colombia</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS from Boostrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <!-- JavaScript from Boostrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script src="app.js" type="text/javascript" defer></script>
+    <script src="jquery.js" type="text/javascript" defer></script>
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <nav>
+      <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand"><strong>Exchange Colombia</strong></a>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button type="button" class="btn btn-primary">Search</button>
+          </form>
+        </div>
+      </nav>
+    </nav>
+
+    <form name="form">
+      <p id="username">Usuario: <input type="text" name="login" /></p>
+      <p id="password">
+        Contraseña: <input type="password" name="password" />
+        <input onclick="go()" type="button" value="Acceder" />
+      </p>
+    </form>
+
+    <div class="d-grid gap-2">
+      <button class="btn btn-primary" type="button" id="boton">
+        Quiero visitar Google Finance!
+      </button>
+    </div>
+
+    <div>
+      <img src="img/IMGJS.png" alt="#" width="100%" height="100%" />
+    </div>
+
+    <div>
+      <h1 id="titulo"><strong>Calculadoras de divisas</strong></h1>
+    </div>
+
+    <section id="ppal">
+      <div>
+        <h4>Dolar: Indica cuantos dolares tienes</h4>
+        <input id="botonInput" />
+        <button type="button" class="btn btn-primary" id="enviarInput">
+          Cambiar
+        </button>
+        <div id="resultado"></div>
+      </div>
+
+      <div>
+        <h4>Euro: Indica cuantos Euros tienes</h4>
+        <input id="botonInputE" />
+        <button type="button" class="btn btn-primary" id="enviarInputE">
+          Cambiar
+        </button>
+        <div id="resultadoE"></div>
+      </div>
+
+      <div>
+        <h4>Yen: Indica cuantos Yenes tienes</h4>
+        <input id="botonInputY" />
+        <button type="button" class="btn btn-primary" id="enviarInputY">
+          Cambiar
+        </button>
+        <div id="resultadoY"></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h6>Opciones</h6>
+      <button type="button" class="btn btn-primary" id="botonNovedadesM">
+        Menú de novedades
+      </button>
+      <button class="btn btn-primary" type="button" id="botonAX">
+        Politica de tratamiento de datos
+      </button>
+    </section>
+    <div id="sectionAX"></div>
+
+    <div id="cartaNoticias">
+      <div class="card">
+        <div class="card-header">
+          <strong>Novedades</strong>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Quiero conocer las ultimas noticias</h5>
+          <p class="card-text">Conoce nuestro sitio de noticias aliado</p>
+          <a
+            href="https://www.portafolio.co/noticias-economicas/dinero"
+            class="btn btn-primary"
+            >Quiero ir!</a
+          >
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Quiero contactarme</h5>
+              <p class="card-text">Contactanos en nuestro correo electronico</p>
+              <a href="#" class="btn btn-primary">Contactar</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Quiero descuentos en mis compras</h5>
+              <p class="card-text">
+                Unete a nuestro sitio web y gana increibles descuentos
+              </p>
+              <a href="#" class="btn btn-primary">Quiero unirme</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <img src="img/IMGJS2.png" alt="#" width="100%" height="100%" />
+    </div>
+
+    <footer>
+      <footer class="bg-light text-center text-lg-start">
+        <!-- Grid container -->
+        <div class="container p-4">
+          <!--Grid row-->
+          <div class="row">
+            <!--Grid column-->
+            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+              <h5 class="text-uppercase"><strong>Nosotros</strong></h5>
+
+              <p>
+                Una herramienta fácil, sencilla para personas que necesitan una
+                respuesta rápida al cambio de sus monedas.
+              </p>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+              <h5 class="text-uppercase"><strong>Contactanos</strong></h5>
+
+              <p>Teléfono: +57 123 456 78 90 Medellín, Colombia.</p>
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div
+          class="text-center p-3"
+          id="foot"
+          style="background-color: rgba(0, 0, 0, 0.2)"
+        ></div>
+        <!-- Copyright -->
+      </footer>
+    </footer>
+  </body>
+</html>
